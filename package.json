@@ -8,7 +8,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "mocha test/**/*.test.js --exit",
-    "test:report": "mocha test/external/alunos.external.test.js test/external/fluxoMatriculaDisciplina.test.js test/external/login.external.test.js test/external/trabalhoFinal.test.js test/internal/login.test.js --exit --reporter mocha-junit-reporter --reporter-options mochaFile=test-results/junit.xml"
+    "test:report": "mocha test/external/alunos.external.test.js test/external/fluxoMatriculaDisciplina.test.js test/external/login.external.test.js test/external/trabalhoFinal.test.js test/internal/login.test.js --exit --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=report,html=true,json=true"
   },
   "author": "",
   "license": "ISC",
@@ -30,7 +30,7 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^8.1.1",
     "nodemon": "^3.1.4"
   }
 }
