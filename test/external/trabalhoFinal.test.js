@@ -15,6 +15,7 @@ describe('Fluxo de entrega do trabalho final', () => {
 				senha: cenario.aluno.senha
 			};
 
+			
 			// Etapa 2: autenticar como administrador.
 			const tokenAdmin = await comTokenDeAdmin();
 			const loginAdminResposta = await api()
