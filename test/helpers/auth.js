@@ -13,6 +13,7 @@ export async function comTokenDeAdmin() {
                     senha: process.env.ADMIN_SENHA || process.env.ADMIN_PASSWORD || 'admin123'
             });
         
+            
         tokenEmCache = loginResposta.body.token;
     }
 

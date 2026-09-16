@@ -6,7 +6,7 @@ import cenarios from '../fixtures/trabalhoFinal.json' with { type: 'json' };
 describe('Fluxo de entrega do trabalho final', () => {
 	cenarios.forEach((cenario) => {
 		it(cenario.testTitle, async () => {
-			// Etapa 1: preparar dados exclusivos para o aluno do cenário.
+			// Etapa 1: preparar dados exclusivos para o aluno do cenário passado.
 			const identificador = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 			const dadosAluno = {
 				nome: cenario.aluno.nome,
