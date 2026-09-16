@@ -8,16 +8,11 @@ export async function comTokenDeAdmin() {
         const loginResposta = await api()
             .post('/api/auth/login')
             .set('Content-Type', 'application/json')
-            .send({ 
-                    email: process.env.ADMIN_EMAIL || 'admin@escola.com', 
-                    senha: process.env.ADMIN_SENHA || process.env.ADMIN_PASSWORD || 'admin123'
+            .send({
+            email: process.env.ADMIN_EMAIL || 'admin@escola.com',
+            senha: process.env.ADMIN_SENHA || process.env.ADMIN_PASSWORD || 'admin123'
             });
-        
-            
-                    email: process.env.ADMIN_EMAIL, 
-                    senha: process.env.ADMIN_SENHA
-            });
-        
+
         tokenEmCache = loginResposta.body.token;
     }
 

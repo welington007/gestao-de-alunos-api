@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { api } from '../helpers/api.js';
 import { comTokenDeAdmin, comTokenDeAluno } from '../helpers/auth.js';
-import cenarios from '../fixtures/trabalhoFinal.json' assert { type: 'json' };
+import cenarios from '../fixtures/trabalhoFinal.json' with { type: 'json' };
 
 describe('Fluxo de entrega do trabalho final', () => {
 	cenarios.forEach((cenario) => {
