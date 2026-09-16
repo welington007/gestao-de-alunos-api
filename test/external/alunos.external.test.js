@@ -42,6 +42,5 @@ describe('Login', () => {
         //expect(cadastroAlunoResposta.body.nome).to.equal('Julio de Lima');
         //expect(cadastroAlunoResposta.body.email).to.equal('julio.lima@example.com');
         //expect(cadastroAlunoResposta.body.matricula).to.equal('2026-0001');
-
     });
 });
