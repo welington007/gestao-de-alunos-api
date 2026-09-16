@@ -58,6 +58,17 @@ jobs:
       - name: Executar testes
         run: npm run test:report
 
+      - name: Exibir resumo do relatório JUnit
+        if: always()
+        run: |
+          if [ -f test-results/junit.xml ]; then
+            grep -o 'tests="[0-9]*"' test-results/junit.xml | head -1
+            grep -o 'failures="[0-9]*"' test-results/junit.xml | head -1
+            grep -o 'errors="[0-9]*"' test-results/junit.xml | head -1
+          else
+            echo 'Relatório JUnit não foi gerado.'
+          fi
+
       - name: Publicar relatório JUnit
         if: always()
         uses: actions/upload-artifact@v4
