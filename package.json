@@ -8,7 +8,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "mocha test/**/*.test.js --exit",
-    "test:report": "mocha test/**/*.test.js --exit --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=report,html=true,json=true"
+    "test:report": "mocha test/**/*.test.js --exit --reporter mocha-junit-reporter --reporter-options mochaFile=test-results/junit.xml"
   },
   "author": "",
   "license": "ISC",
@@ -30,7 +30,7 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "mochawesome": "^8.1.1",
+    "mocha-junit-reporter": "^2.2.1",
     "nodemon": "^3.1.4"
   }
 }

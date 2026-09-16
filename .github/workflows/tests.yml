@@ -56,7 +56,15 @@ jobs:
           exit 1
 
       - name: Executar testes
-        run: npm test
+        run: npm run test:report
+
+      - name: Publicar relatório JUnit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-test-report
+          path: test-results/junit.xml
+          if-no-files-found: warn
 
       - name: Publicar log da API em caso de falha
         if: failure()
