@@ -14,6 +14,10 @@ export async function comTokenDeAdmin() {
             });
         
             
+                    email: process.env.ADMIN_EMAIL, 
+                    senha: process.env.ADMIN_SENHA
+            });
+        
         tokenEmCache = loginResposta.body.token;
     }
 

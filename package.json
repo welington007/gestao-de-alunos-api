@@ -9,6 +9,7 @@
     "dev": "nodemon src/server.js",
     "test": "mocha test/**/*.test.js",
     "test:report": "mocha test/**/*.test.js --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=report,html=true,json=true"
+    "test": "mocha test/**/*.test.js"
   },
   "author": "",
   "license": "ISC",

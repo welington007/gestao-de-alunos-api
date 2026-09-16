@@ -42,6 +42,18 @@ describe('Login', () => {
         //expect(cadastroAlunoResposta.body.nome).to.equal('Julio de Lima');
         //expect(cadastroAlunoResposta.body.email).to.equal('julio.lima@example.com');
         //expect(cadastroAlunoResposta.body.matricula).to.equal('2026-0001');
+            .send({
+                nome: 'Julio de Lima',
+                email: 'julio.lima@example.com',
+                matricula: '2026-0001',
+                senha: '123456'
+            });
+
+        // Validar que ele foi cadastrado
+        expect(cadastroAlunoResposta.status).to.equal(201);
+        expect(cadastroAlunoResposta.body.nome).to.equal('Julio de Lima');
+        expect(cadastroAlunoResposta.body.email).to.equal('julio.lima@example.com');
+        expect(cadastroAlunoResposta.body.matricula).to.equal('2026-0001');
 
     });
 });
