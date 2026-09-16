@@ -4,7 +4,7 @@ import { getToken } from '../helpers/auth.js';
 import { novoAluno } from '../factories/alunosFactory.js';
 
 
-describe('Login', () => {
+describe('Gestão de Alunos - Testes Externos', () => {
     let token;
 
     beforeEach(async () => {
