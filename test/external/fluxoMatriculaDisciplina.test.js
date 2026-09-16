@@ -10,8 +10,7 @@ describe('Matrícula de Aluno em Disciplina', () => {
     // - Não ter no banco de dados uma aluna com email ana.souza.1004@example.com e a matricula 202401004
     // - Não ter uma disciplina com o código PC1004
     it('Validar que um aluno que acaba de ser cadastrado pode ser matriculado em uma nova disciplina', async () => {
-    it.only('Validar que um aluno que acaba de ser cadastrado pode ser matriculado em uma nova disciplina', async () => {
-        // Arrange (Given/Dado que/Preparar)
+         // Arrange (Given/Dado que/Preparar)
         // Cadastrar o aluno e cadastrar a disciplina
         const cadastroAlunoResposta = await api()
             .post('/api/admin/alunos')
