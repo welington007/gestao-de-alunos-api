@@ -38,9 +38,9 @@ describe('Gestão de Alunos - Testes Externos', () => {
 
         // Validar que ele foi cadastrado
         expect(cadastroAlunoResposta.status).to.equal(201);
-        //expect(cadastroAlunoResposta.body.alunoId).to.equal(alunoId);
-        //expect(cadastroAlunoResposta.body.nome).to.equal('Julio de Lima');
-        //expect(cadastroAlunoResposta.body.email).to.equal('julio.lima@example.com');
-        //expect(cadastroAlunoResposta.body.matricula).to.equal('2026-0001');
+        expect(cadastroAlunoResposta.body.alunoId).to.equal(alunoId);
+        expect(cadastroAlunoResposta.body.nome).to.equal('Julio de Lima');
+        expect(cadastroAlunoResposta.body.email).to.equal('julio.lima@example.com');
+        expect(cadastroAlunoResposta.body.matricula).to.equal('2026-0001');
     });
 });
